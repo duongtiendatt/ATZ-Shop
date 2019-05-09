@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace ClothesShop.Web.Areas.admin.Controllers
 {
+    [Authorize]
     public class ManageController : Controller
     {
         readonly SanPhamManage _sanPhamManage = new SanPhamManage();
@@ -56,11 +57,10 @@ namespace ClothesShop.Web.Areas.admin.Controllers
             return View();
         }
 
-        // POST: admin/AddProduct
-        [HttpPost]
-        public JsonResult AddProduct(SanPhamDTO sanPhamDTO, HttpPostedFileBase anh)
+        // POST: admin/UpdateProduct
+        public JsonResult UpdateProduct(SanPhamDTO sanPhamDTO, HttpPostedFileBase anh)
         {
-            string imgPath = Path.Combine(HttpContext.Server.MapPath("/App_Data"),
+            string imgPath = Path.Combine(HttpContext.Server.MapPath("/Assets/client/image/"),
                                               Path.GetFileName(anh.FileName));
             anh.SaveAs(imgPath);
 
@@ -69,7 +69,7 @@ namespace ClothesShop.Web.Areas.admin.Controllers
             sanPhamDTO.NgayTao = DateTime.Now;
             sanPhamDTO.TrangThai = (int)EnumCommon.Status.TonTai;
 
-            //var addBool = _sanPhamManage.Insert(sanPhamDTO);
+            var addProduct = _sanPhamManage.Insert(sanPhamDTO);
 
             return Json(true, JsonRequestBehavior.AllowGet);
         }
@@ -104,10 +104,33 @@ namespace ClothesShop.Web.Areas.admin.Controllers
         // GET: admin/DetailCart
         public ActionResult DetailCart(int? maHD)
         {
-            var model = new List<DonHangDTO>();
+            var model = _donHangManage.GetById((int)maHD);
 
             return View(model);
         }
 
+
+        //Confirm cart
+        public JsonResult ConfirmCart(int idCart)
+        {
+            var status = "error";
+            var message = "";
+            var getInfoCart = _donHangManage.GetById(idCart);
+            getInfoCart.TrangThai = (int)EnumCommon.StatusCart.HoanThanh;
+            var result = _donHangManage.Update(getInfoCart);
+            switch (result)
+            {
+                case true:
+                    {
+                        status = "success";
+                        message = "Xác nhận thành công";
+                    }
+                    break;
+                default:
+                    message = "Đã xảy ra lỗi, thử lại sau";
+                    break;
+            }
+            return Json(new { message = message, status = status }, JsonRequestBehavior.AllowGet);
+        }
     }
 }

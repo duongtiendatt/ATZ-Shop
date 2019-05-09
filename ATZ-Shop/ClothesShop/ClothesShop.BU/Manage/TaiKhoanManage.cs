@@ -58,6 +58,16 @@ namespace ClothesShop.BU.Manage
             return ef.MaTaiKhoan;
         }
 
+        public TaiKhoanDTO GetTaiKhoanByIdentity(string idIdentity)
+        {
+            var ef = db.TaiKhoans.FirstOrDefault(x => x.IdAspNetUser.Equals(idIdentity));
+            var dto = new TaiKhoanDTO();
+            if (ef == null)
+                return null;
+            dto = _convert.ConvertToDTO(ef);
+            return dto;
+        }
+
 
         #region Xử lý Thêm, Sửa, Xóa
         public bool Insert(TaiKhoanDTO taiKhoanDTO)

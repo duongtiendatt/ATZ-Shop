@@ -2050,3 +2050,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     width: 70px;
     text-align: center;
 }
+
+.confirmcart:hover{
+    cursor: pointer;
+}

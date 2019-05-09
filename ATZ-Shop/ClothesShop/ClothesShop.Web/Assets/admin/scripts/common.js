@@ -259,8 +259,8 @@ $("#submitSP").click(function (event) {
         SizeXL: $("#sizexl").val(),
         SizeXXL: $("#sizexxl").val()
     };
-
-    if (sanPhamDTO.TenSanPham !== "" && sanPhamDTO.MoTa !== "" && sanPhamDTO.HangSanXuat !== "" && sanPhamDTO.NamSanXuat !== "" && sanPhamDTO.GiaBan !== "") {
+    console.log(sanPhamDTO);
+    if (sanPhamDTO.TenSanPham != "" && sanPhamDTO.MoTa != "" && sanPhamDTO.HangSanXuat != "" && sanPhamDTO.NamSanXuat != "" && sanPhamDTO.GiaBan != "") {
         if (sanPhamDTO.MaDanhMuc === 2 && sanPhamDTO.GiaSale !== "" && sanPhamDTO.GiaBan <= sanPhamDTO.GiaSale) {
             $.notify("Giá sale phải nhỏ hơn giá bán!", "warning");
         }
@@ -272,16 +272,37 @@ $("#submitSP").click(function (event) {
             }
             var file = $("#anh")[0].files[0];
             formData.append("anh", file);
-
             $.ajax({
                 type: 'post',
-                url: '/admin/Manage/AddProduct',
+                url: '/admin/Manage/UpdateProduct',
                 data: formData,
                 contentType: false,
                 processData: false,
                 success: function (response) {
                     if (response) {
-                        removeBoxContact();
+                        $.notify("Gửi liên hệ thành công!", "success");
+                    }
+                    else {
+                        $.notify("Gửi liên hệ thất bại!", "error");
+                    }
+                }
+            });
+        } else if (sanPhamDTO.MaDanhMuc !== 2 && sanPhamDTO.GiaSale === "") {
+            event.preventDefault();
+            var formData = new FormData();
+            for (var sp in sanPhamDTO) {
+                formData.append(sp, sanPhamDTO[sp]);
+            }
+            var file = $("#anh")[0].files[0];
+            formData.append("anh", file);
+            $.ajax({
+                type: 'post',
+                url: '/admin/Manage/UpdateProduct',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response) {
                         $.notify("Gửi liên hệ thành công!", "success");
                     }
                     else {
@@ -290,5 +311,87 @@ $("#submitSP").click(function (event) {
                 }
             });
         }
+    } else {
+        console.log("test in");
     }
 });
+
+//Confirm cart
+$('.confirmcart').click(function () {
+    var getCart = $(this).attr('id');
+    var idCart = getCart.substring(4, getCart.length);
+    $.ajax({
+        type: 'post',
+        url: '/admin/Manage/ConfirmCart',
+        data: { idCart: parseInt(idCart) },
+        success: function (response) {
+            $.notify(response.message, response.status);
+            window.setTimeout(function () { window.location.reload(); }, 1000);
+        }
+    });
+});
+
+//Login
+//$("#__AjaxAntiForgeryForm").validate({
+//    rules: {
+//        Password: {
+//            required: true,
+//            minlength: 6
+//        },
+//        Email: {
+//            required: true,
+//            email: true
+//        }
+//    },
+//    messages: {
+//        Password: {
+//            required: "Mật khẩu không được để trống",
+//            minlength: "Mật khẩu có độ dài tối thiểu là 6 ký tự"
+//        },
+//        Email: {
+//            email: "Hãy nhập đúng định dạng email"
+//        }
+//    },
+//    submitHandler: function (form) {
+//        Login();
+//    }
+//});
+
+//Login
+$("#loginbtn").click(function (event) {
+    var model = {
+        User: $('#EmailLogin').val(),
+        Password: $('#PassLogin').val(),
+        RememberMe: $('#RememberMe').is(":checked")
+    };
+    var checkTM = true;
+    if (model.Email == '' || model.Password == '') {
+        checkTM = false;
+        $.notify("Hãy nhập đủ thông tin", "error");
+    }
+    if (checkTM) {
+        event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: '/Login/UserLogin',
+            data: AddAntiForgeryToken({ model: model }),
+            success: function (result) {
+                $.notify(result.message, result.status);
+                if (result.status == "success") {
+                    window.setTimeout(function () { location.href = "/admin/Manage/Account"; }, 500);
+                } else {
+                    //$('#Login').removeAttr("disabled");
+                }
+            },
+            error: function (ex) {
+                $.notify("Đăng nhập không thành công!", "error");
+                return false;
+            }
+        });
+    }
+});
+//To accept ValidateAntiForgeryToken in controller
+//AddAntiForgeryToken = function (data) {
+//    data.__RequestVerificationToken = $('#__AjaxAntiForgeryForm input[name=__RequestVerificationToken]').val();
+//    return data;
+//};

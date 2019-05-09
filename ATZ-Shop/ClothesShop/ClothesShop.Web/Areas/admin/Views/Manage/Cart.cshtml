@@ -56,9 +56,11 @@
                                 }
                             </td>
                             <td>
-                                <a href="#">Xác nhận</a> |
-                                <a href="#">Chi tiết</a> |
-                                <a href="#">Xóa</a>
+                                @if (dh.TrangThai == (int)EnumCommon.StatusCart.DoiGiaoHang)
+                                {
+                                    <a class="confirmcart" id="cart@(dh.MaDon)">Xác nhận</a> <span>|</span>
+                                 }
+                                <a href="@Url.Action("DetailCart","Manage", new { maHD = dh.MaDon })">Chi tiết</a>
                             </td>
                         </tr>
                     }

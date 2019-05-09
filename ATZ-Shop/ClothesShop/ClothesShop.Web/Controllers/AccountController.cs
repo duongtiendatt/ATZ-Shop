@@ -60,6 +60,8 @@ namespace ClothesShop.Web.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
+            if(!string.IsNullOrEmpty(returnUrl) && returnUrl.ToLower().Contains("admin"))
+                return Redirect("~/Admin/Login");
             return View();
         }
 
