@@ -1,0 +1,153 @@
+﻿@using ClothesShop.BU.Common
+@using PagedList.Mvc
+@model PagedList.IPagedList<ClothesShop.BU.DTO.SanPhamDTO>
+
+@{
+    ViewBag.Title = "Sản phẩm";
+    var activeColor = "this-color";
+    var tatCa = (int)EnumCommon.Product.TatCa;
+    var hangDangSale = (int)EnumCommon.Product.HangDangSale;
+    var hangMoiVe = (int)EnumCommon.Product.HangMoiVe;
+    var phuKien = (int)EnumCommon.Product.PhuKien;
+    var thoiTrangNam = (int)EnumCommon.Product.ThoiTrangNam;
+    var thoiTrangNu = (int)EnumCommon.Product.ThoiTrangNu;
+    var thoiTrangTreEm = (int)EnumCommon.Product.ThoiTrangTreEm;
+    var stt = 0;
+}
+
+
+<!-- Start Breadcrumbs Section -->
+<section class="breadcrumbs-section background_bg" data-img-src="/Assets/client/image/aboutus-breadcrumbs-img.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page_title text-center">
+                    <h1>Sản phẩm</h1>
+                    <ul class="breadcrumb justify-content-center">
+                        <li><span>Đảm bảo - Chất lượng - Giá cả hợp lí</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Header Section -->
+<!-- Start Shop Section -->
+<section class="shop-inner-section pt_large pb_large">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 col-md-12">
+                <div class="shop-options d-sm-flex justify-content-between align-items-center">
+                    <form action="/Product/Index" method="post">
+                        <input type="hidden" name="product" value="@ViewBag.Product" />
+                        <div class="sorting-option">
+                            <select class="sorting-items" name="sx" onchange="this.form.submit()">
+                                @if (ViewBag.SX == (int)EnumCommon.SapXep.MacDinh)
+                                {
+                                    <option value="0" selected="selected">Mặc định</option>
+                                    <option value="1">Giá cao xuống thấp</option>
+                                    <option value="2">Giá thấp lên cao</option>
+                                }
+                                else if (ViewBag.SX == (int)EnumCommon.SapXep.CaoXuongThap)
+                                {
+                                    <option value="0">Mặc định</option>
+                                    <option value="1" selected="selected">Giá cao xuống thấp</option>
+                                    <option value="2">Giá thấp lên cao</option>
+                                }
+                                else if (ViewBag.SX == (int)EnumCommon.SapXep.ThapLenCao)
+                                {
+                                    <option value="0">Mặc định</option>
+                                    <option value="1">Giá cao xuống thấp</option>
+                                    <option value="2" selected="selected">Giá thấp lên cao</option>
+                                }
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="row list_grid_container grid justify-content-center show-product">
+                    @foreach (var item in Model)
+                    {
+                        stt++;
+                        <div class="col-md-4 col-6">
+                            <div class="product-box common-cart-box box-@stt">
+                                <div class="product-img common-cart-img">
+                                    <img src="@item.AnhSanPham" alt="product-img">
+                                </div>
+                                <div class="product-info common-cart-info text-center">
+                                    <a href="/Product/Detail?productId=@item.MaSanPham" class="cart-name">@item.TenSanPham</a>
+                                    <p class="cart-price">
+                                        @if (item.GiaSale != null)
+                                        {
+                                            <del>@item.GiaBan đ</del><span>@item.GiaSale đ</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@item.GiaBan đ</span>
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="justify-content-center">
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, product = @ViewBag.Product, sx = @ViewBag.SX }))
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-12 order-lg-first">
+                <div class="shop-sidebar">
+                    <div class="side-quantity-box side-box">
+                        <div class="side-box-title">
+                            <h6>Danh mục</h6>
+                        </div>
+                        <div class="quantity-box-detail">
+                            <ul>
+                                <li>
+                                    <a class="@if ((int)ViewBag.Product == tatCa) {
+                                    @activeColor } " href="/Product?product=@tatCa">Tất cả<span>(@ViewBag.TatCa)</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="@if ((int)ViewBag.Product == hangMoiVe) {
+                                    @activeColor } " href="/Product?product=@hangMoiVe">Hàng mới về<span>(@ViewBag.HangMoiVe)</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="@if ((int)ViewBag.Product == hangDangSale) {
+                                    @activeColor } " href="/Product?product=@hangDangSale">Hàng đang sale<span>(@ViewBag.HangDangSale)</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="@if ((int)ViewBag.Product == thoiTrangNam) {
+                                    @activeColor } " href="/Product?product=@thoiTrangNam">Thời trang nam<span>(@ViewBag.ThoiTrangNam)</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="@if ((int)ViewBag.Product == thoiTrangNu) {
+                                    @activeColor } " href="/Product?product=@thoiTrangNu">Thời trang nữ<span>(@ViewBag.ThoiTrangNu)</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="@if ((int)ViewBag.Product == thoiTrangTreEm) {
+                                    @activeColor } " href="/Product?product=@thoiTrangTreEm">Thời trang trẻ em<span>(@ViewBag.ThoiTrangTreEm)</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="@if ((int)ViewBag.Product == phuKien) {
+                                    @activeColor } " href="/Product?product=@phuKien">Phụ kiện<span>(@ViewBag.PhuKien)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Shop Section -->

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e17644bdccec4caf92537554479333df" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="ClothesShopModel.AspNetRole" Width="1.5" PointX="0.75" PointY="4.625" />
+        <EntityTypeShape EntityType="ClothesShopModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="ClothesShopModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="4" />
+        <EntityTypeShape EntityType="ClothesShopModel.AspNetUser" Width="1.5" PointX="3" PointY="3.375" />
+        <EntityTypeShape EntityType="ClothesShopModel.DanhMuc" Width="1.5" PointX="7.75" PointY="2.125" />
+        <EntityTypeShape EntityType="ClothesShopModel.DonHang" Width="1.5" PointX="7.5" PointY="6.5" />
+        <EntityTypeShape EntityType="ClothesShopModel.SanPham" Width="1.5" PointX="10" PointY="1" />
+        <EntityTypeShape EntityType="ClothesShopModel.SanPhamSize" Width="1.5" PointX="12.25" PointY="1.75" />
+        <EntityTypeShape EntityType="ClothesShopModel.Size" Width="1.5" PointX="10" PointY="6.125" />
+        <EntityTypeShape EntityType="ClothesShopModel.TaiKhoan" Width="1.5" PointX="5.25" PointY="6.5" />
+        <AssociationConnector Association="ClothesShopModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ClothesShopModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="ClothesShopModel.FK_TaiKhoan_AspNetUsers" />
+        <AssociationConnector Association="ClothesShopModel.FK_SanPham_DanhMuc" />
+        <AssociationConnector Association="ClothesShopModel.FK_DonHang_TaiKhoan" />
+        <AssociationConnector Association="ClothesShopModel.FK_SanPhamSize_SanPham" />
+        <AssociationConnector Association="ClothesShopModel.FK_SanPhamSize_Size" />
+        <AssociationConnector Association="ClothesShopModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="ClothesShopModel.ChiTietDonHang" Width="1.5" PointX="7.375" PointY="4.375" />
+        <AssociationConnector Association="ClothesShopModel.FK_ChiTietDonHang_DonHang" />
+        <AssociationConnector Association="ClothesShopModel.FK_ChiTietDonHang_SanPham" />
+        <AssociationConnector Association="ClothesShopModel.FK_ChiTietDonHang_Size" />
+        <EntityTypeShape EntityType="ClothesShopModel.LienHe" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

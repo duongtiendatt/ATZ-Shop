@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+<div class="header-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="header_list text-md-left text-center">
+                    <li><a href="tel:+ 00 123 456 789"><i class="fa fa-phone"></i>+ 00 123 456 789</a></li>
+                    <li><a href="mailto:info@gmail.com"><i class="fa fa-envelope-o"></i>info@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="header_list text-md-right text-center" style="color:azure">
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <li>
+                                <a href="#">Xin chào! @User.Identity.Name</a>
+                            </li>
+                            <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li>
+                            <a href="#test-popup1" class="open-popup-link">Đăng nhập</a>
+                            <div id="test-popup1" class="white-popup lr-popup mfp-hide text-center">
+                                <h4>Đăng nhập</h4>
+                                <form class="subscribe-popup-form" method="post" action="/Account/Login">
+                                    @Html.AntiForgeryToken()
+                                    <input name="User" required type="text" placeholder="Tài khoản">
+                                    <input name="Password" required type="password" placeholder="Mật khẩu">
+                                    <button class="btn btn-primary" title="Login" type="submit">Đăng nhập</button>
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#test-popup2" class="sign-up open-popup-link">Đăng ký</a>
+                            <div id="test-popup2" class="white-popup lr-popup mfp-hide">
+                                <h4>Đăng ký</h4>
+                                <form class="subscribe-popup-form" method="post">
+                                    <input name="User" id="r_user" required type="text" placeholder="Tài khoản">
+                                    <input name="Password" id="r_pass" required type="password" placeholder="Mật khẩu">
+                                    <input name="ConfirmPassword" id="r_conPass" required type="password" placeholder="Nhập lại mật khẩu">
+                                    <input name="UserName" id="r_name" required type="text" placeholder="Họ tên">
+                                    <input name="Email" id="r_email" required type="email" placeholder="Email">
+                                    <input name="Phone" id="r_phone" required type="text" placeholder="Số điện thoại">
+                                    <button class="btn btn-primary" title="Subscribe" type="submit" id="btn_register">Đăng ký</button>
+                                </form>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

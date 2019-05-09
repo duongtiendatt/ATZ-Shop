@@ -1,0 +1,52 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<ClothesShop.BU.DTO.TaiKhoanDTO>
+
+@{
+    ViewBag.Title = "Quản lí tài khoản";
+    var soThuTu = ((int)ViewBag.pageNumber - 1) * ViewBag.pageSize;
+}
+
+<div class="module">
+    <div class="module-head">
+        <h3>
+            Khách hàng
+        </h3>
+    </div>
+    <div class="module-body table">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
+            <div class="dataTables_filter" id="DataTables_Table_0_filter">
+                <form action="/admin/Manage/Account" method="post">
+                    <input type="text" aria-controls="DataTables_Table_0" placeholder="Tài khoản hoặc họ tên" name="txt" value="@ViewBag.Txt">
+                    <button>Tìm kiếm</button>
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr style="font-weight:bold">
+                        <th>STT</th>
+                        <th>Tài khoản</th>
+                        <th>Họ tên</th>
+                        <th>Email</th>
+                        <th>SĐT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var taiKhoan in Model)
+                    {
+                        soThuTu++;
+                        <tr>
+                            <td>@soThuTu</td>
+                            <td>@taiKhoan.User</td>
+                            <td>@taiKhoan.HoTen</td>
+                            <td>@taiKhoan.Email</td>
+                            <td>@taiKhoan.SoDienThoai</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <nav class="justify-content-center">
+                @Html.PagedListPager(Model, page => Url.Action("Account", new { page, txt = ViewBag.Txt }))
+            </nav>
+        </div>
+    </div>
+</div>

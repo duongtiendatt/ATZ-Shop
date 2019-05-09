@@ -1,0 +1,74 @@
+﻿@using ClothesShop.BU.Common
+@using PagedList.Mvc
+@model PagedList.IPagedList<ClothesShop.BU.DTO.DonHangDTO>
+
+@{
+    ViewBag.Title = "Đơn hàng";
+    var soThuTu = ((int)ViewBag.pageNumber - 1) * ViewBag.pageSize;
+}
+
+<div class="module">
+    <div class="module-head">
+        <h3>
+            Đơn hàng
+        </h3>
+    </div>
+    <div class="module-body table">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
+            <div class="dataTables_filter" id="DataTables_Table_0_filter">
+                <form action="/admin/Manage/Cart" method="post">
+                    <input type="text" aria-controls="DataTables_Table_0" placeholder="Họ tên" name="txt" value="@ViewBag.Txt">
+                    <button>Tìm kiếm</button>
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr style="font-weight:bold">
+                        <th>STT</th>
+                        <th>Mã HĐ</th>
+                        <th>Họ tên</th>
+                        <th>Điện thoại</th>
+                        <th>Địa chỉ</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dh in Model)
+                    {
+                        soThuTu++;
+                        <tr>
+                            <td>@soThuTu</td>
+                            <td>@dh.MaDon</td>
+                            <td>@dh.HoTenNN</td>
+                            <td>@dh.DienThoaiNN</td>
+                            <td>@dh.DiaChiNN</td>
+                            <td>@dh.TongTien</td>
+                            <td>
+                                @if (dh.TrangThai == (int)EnumCommon.StatusCart.DoiGiaoHang)
+                                {
+                                    <span>Đợi giao hàng</span>
+                                }
+                                else if (dh.TrangThai == (int)EnumCommon.StatusCart.HoanThanh)
+                                {
+                                    <span>Hoàn thành</span>
+                                }
+                            </td>
+                            <td>
+                                <a href="#">Xác nhận</a> |
+                                <a href="#">Chi tiết</a> |
+                                <a href="#">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <nav class="justify-content-center">
+                @Html.PagedListPager(Model, page => Url.Action("Cart", new { page, txt = ViewBag.Txt }))
+            </nav>
+        </div>
+    </div>
+</div>
+
+

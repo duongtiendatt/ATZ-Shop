@@ -1,0 +1,55 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<ClothesShop.BU.DTO.SanPhamDTO>
+@{
+    ViewBag.Title = "Tìm kiếm";
+    var stt = 0;
+}
+
+
+<!-- Start Shop Section -->
+<section class="shop-inner-section pt_large pb_large">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="title text-left">
+                    <h4>Có <span style="color:red">@ViewBag.NumberSearch</span> sản phẩm được tìm thấy</h4>
+                </div>
+                <div class="row list_grid_container grid justify-content-center show-product">
+                    @foreach (var item in Model)
+                    {
+                        stt++;
+                        <div class="col-md-3 col-6">
+                            <div class="product-box common-cart-box box-@stt">
+                                <div class="product-img common-cart-img">
+                                    <img src="@item.AnhSanPham" alt="product-img">
+                                </div>
+                                <div class="product-info common-cart-info text-center">
+                                    <a href="/Product/Detail?productId=@item.MaSanPham" class="cart-name">@item.TenSanPham</a>
+                                    <p class="cart-price">
+                                        @if (item.GiaSale != null)
+                                        {
+                                            <del>@item.GiaBan đ</del><span>@item.GiaSale đ</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@item.GiaBan đ</span>
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="justify-content-center">
+                            @Html.PagedListPager(Model, page => Url.Action("Search", new { page, txt = @ViewBag.Text }))
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Shop Section -->

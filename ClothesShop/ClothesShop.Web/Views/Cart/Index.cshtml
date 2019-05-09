@@ -1,0 +1,142 @@
+﻿@using ClothesShop.BU.DTO
+@{
+    ViewBag.Title = "Giỏ hàng";
+    var productsCart = (List<ChiTietDonHangDTO>)Session["GioHang"];
+    var priceTotal = 0;
+    if (productsCart != null)
+    {
+        if (productsCart.Count() != 0)
+        {
+            foreach (var product in productsCart)
+            {
+                priceTotal += (int)product.Gia * (int)product.SoLuong;
+            }
+        }
+    }
+    var stt = 1;
+}
+
+
+
+<!-- Start Breadcrumbs Section -->
+<section class="breadcrumbs-section background_bg" data-img-src="/Assets/client/image/cart-breadcrumbs-img.jpg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="page_title text-center">
+                    <h1>Giỏ hàng của bạn</h1>
+                    <ul class="breadcrumb justify-content-center">
+                        <li><span>Danh sách sản phẩm</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Header Section -->
+<!-- Start Cart Section -->
+<section class="cart-section pt_large">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="cart-table table-responsive">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                            <tr class="row-1">
+                                <th class="row-title"><p>Sản phẩm</p></th>
+                                <th class="row-title"><p>Tên sản phẩm</p></th>
+                                <th class="row-title"><p>Size</p></th>
+                                <th class="row-title"><p>Giá đơn</p></th>
+                                <th class="row-title"><p>Số lượng</p></th>
+                                <th class="row-title"><p>Giá tổng</p></th>
+                                <th class="row-title"><p></p></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (productsCart != null)
+                            {
+                                foreach (var product in productsCart)
+                                {
+                                    stt++;
+                                    var totalPrice = product.SoLuong * product.Gia;
+                                    <tr class="valTr row-@stt">
+                                        <input type="hidden" id="idSanPham" value="@product.MaSanPham" />
+                                        <input type="hidden" id="idSize" value="@product.MaSize" />
+                                        <td class="row-img"><img src="@product.HinhAnh" alt="cart-img" height="240" width="180"></td>
+                                        <td class="product-name" data-title="Product"><a href="/Product/Detail?productId=@product.MaSanPham">@product.TenSanPham</a></td>
+                                        <td class="product-name" data-title="Product"><p>@product.TenSize</p></td>
+                                        <td class="product-price" data-title="Price"><p>@product.Gia đ</p></td>
+                                        <td class="product-quantity" data-title="Quantity">
+                                            <div class="quantity_filter">
+                                                <input type="button" value="-" class="minus">
+                                                <input class="quantity-number qty" type="text" value="@product.SoLuong" min="1" max="10" id="so-luong">
+                                                <input type="button" value="+" class="plus">
+                                            </div>
+                                        </td>
+                                        <td class="product-total" data-title="Subprice"><p>@totalPrice đ</p></td>
+                                        <td class="row-close close-2" data-title="product-remove"><a class="delete-sp" stt="@stt" style="cursor:pointer"><i class="ion-close-circled"></i></a></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="12">
+                                    <ul class="table-btn">
+                                        <li><a href="/Product" class="btn btn-secondary"><i class="fa fa-chevron-left"></i>Tiếp tục mua hàng</a></li>
+                                        <li><a style="color:azure" class="btn btn-primary" id="update-cart"><i class="fa fa-refresh"></i>Cập nhật thay đổi</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Cart Section -->
+<!-- Start Cart Box Section -->
+<section class="cart-box-section pb_large">
+    <div class="container">
+        <form action="/Cart/ThanhToan" method="post">
+            <div class="row justify-content-between">
+                <div class="col-md-4">
+                    <div class="cart-inner-box box-1 text-center">
+                        <div class="ci-title">
+                            <h6>Thông tin khách hàng</h6>
+                        </div>
+                        <div class="ci-caption">
+                            <input required="" class="form-control" type="text" placeholder="Họ và tên" name="HoTenNN">
+                            <input required="" class="form-control" type="text" placeholder="Điện thoại người nhận" name="DienThoaiNN">
+                            <input required="" class="form-control" type="text" placeholder="Địa chỉ nhận hàng" name="DiaChiNN">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cart-inner-box box-2 text-center">
+                        <div class="ci-title">
+                            <h6>Giá giỏ hàng</h6>
+                        </div>
+                        <div class="ci-caption">
+                            <ul>
+                                <li>Tổng giá <span>@priceTotal đ</span></li>
+                            </ul>
+                        </div>
+                        <div class="ci-btn">
+                            @if (productsCart != null && productsCart.Count != 0)
+                            {
+                                <button type="submit" class="btn btn-primary btn-block rounded-0">Thanh toán</button>
+                            }
+                            else
+                            {
+                                <button type="submit" class="btn btn-primary btn-block rounded-0" disabled>Thanh toán</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- End Cart Box Section -->

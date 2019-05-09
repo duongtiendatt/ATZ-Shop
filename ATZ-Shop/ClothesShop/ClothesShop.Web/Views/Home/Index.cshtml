@@ -1,0 +1,188 @@
+﻿@using ClothesShop.BU.Common
+@using ClothesShop.BU.DTO
+@{
+    ViewBag.Title = "Trang chủ";
+    var tatCa = (int)EnumCommon.Product.TatCa;
+    var hangDangSale = (int)EnumCommon.Product.HangDangSale;
+    var hangMoiVe = (int)EnumCommon.Product.HangMoiVe;
+
+    var productNews = (List<SanPhamDTO>)ViewBag.ProductNew;
+    var productSales = (List<SanPhamDTO>)ViewBag.ProductSale;
+}
+
+
+<!-- Start Slider Section -->
+<section class="slider pt-0">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active slider-area background_bg" data-img-src="/Assets/client/image/instabig-img-9.jpg">
+                <div class="banner_slide_content left-align">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7 col-9">
+                                <div class="slider-caption">
+                                    <h1 class="animation" data-animation="fadeInDown" data-animation-delay="0.2s">Mùa hè sôi động</h1>
+                                    <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">Nhận ngay chương trình giảm giá cho các mặt hàng!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item slider-area background_bg" data-img-src="/Assets/client/image/banner2.jpg">
+                <div class="banner_slide_content right-align">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7 col-9">
+                                <div class="slider-caption text-right">
+                                    <h1 class="animation" data-animation="fadeInDown" data-animation-delay="0.2s">Mùa đông đã tới</h1>
+                                    <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">Hãy đến với thời trang đông ấm áp!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item slider-area background_bg" data-img-src="/Assets/client/image/banner1.jpg">
+                <div class="banner_slide_content center-align">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7 col-9">
+                                <div class="slider-caption text-center">
+                                    <h1 class="animation" data-animation="fadeInDown" data-animation-delay="0.2s">Những cơn gió se lạnh</h1>
+                                    <p class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">Rất phù hợp với áo gió phong cách!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+            <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+        </ol>
+    </div>
+</section>
+<!-- End Slider Section -->
+<!-- Start Offer Banner Section -->
+<section class="offer-banners">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 text-center">
+                <a href="/Product?product=@hangMoiVe" class="offer-banner same-hover"><img src="/Assets/client/image/offer-banner-1.jpg" alt="offer-banner"></a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="/Product?product=@hangDangSale" class="offer-banner same-hover"><img src="/Assets/client/image/offer-banner-2.jpg" alt="offer-banner"></a>
+            </div>
+            <div class="col-sm-4 text-center">
+                <a href="/Product?product=@tatCa" class="offer-banner same-hover"><img src="/Assets/client/image/offer-banner-3.jpg" alt="offer-banner"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Offer Banner  Section -->
+<!-- Start Popular Products Section -->
+<section class="popular-products">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title text-center">
+                    <h4>Sản phẩm mới nhất</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="products-slider4 same-nav owl-carousel owl-theme" data-margin="30" data-dots="false" data-nav="true">
+                    @foreach (var productNew in productNews)
+                    {
+                        <div class="item">
+                            <div class="product-box common-cart-box">
+                                <div class="product-img common-cart-img">
+                                    <img src="@productNew.AnhSanPham" alt="product-img">
+                                </div>
+                                <div class="product-info common-cart-info text-center">
+                                    <a href="/Product/Detail?productId=@productNew.MaSanPham" class="cart-name">@productNew.TenSanPham</a>
+                                    <p class="cart-price">
+                                        @if (productNew.GiaSale != null)
+                                        {
+                                            <del>@productNew.GiaBan đ</del><span>@productNew.GiaSale đ</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@productNew.GiaBan đ</span>
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Popular Products Section -->
+<!-- Start Banner Section -->
+<section class="banner-section">
+    <div class="container">
+        <div class="row no-gutters justify-content-center">
+            <div class="col-md-6">
+                <div class="banner-box">
+                    <a href="/Product?product=@hangMoiVe" class="same-hover"><img src="/Assets/client/image/fashion-banner-1.jpg" alt="fashion-banner"></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="banner-box">
+                    <a href="/Product?product=@hangDangSale" class="same-hover"><img src="/Assets/client/image/fashion-banner-2.jpg" alt="fashion-banner"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Banner Section -->
+<!-- Start Best Saller Section -->
+<section class="best-saller">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title text-center">
+                    <h4>Giá tốt nhất</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="products-slider4 same-nav owl-carousel owl-theme" data-margin="30" data-dots="false" data-nav="true">
+                    @foreach (var productSale in productSales)
+                    {
+                        <div class="item">
+                            <div class="saller-box common-cart-box">
+                                <div class="saller-img common-cart-img">
+                                    <img src="@productSale.AnhSanPham" alt="Saller-img">
+                                </div>
+                                <div class="saller-info common-cart-info text-center">
+                                    <a href="/Product/Detail?productId=@productSale.MaSanPham" class="cart-name">@productSale.TenSanPham</a>
+                                    <p class="cart-price">
+                                        @if (productSale.GiaSale != null)
+                                        {
+                                            <del>@productSale.GiaBan đ</del><span>@productSale.GiaSale đ</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@productSale.GiaBan đ</span>
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Best Saller Section -->

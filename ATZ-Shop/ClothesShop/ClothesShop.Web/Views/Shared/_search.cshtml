@@ -1,0 +1,23 @@
+﻿
+
+
+<div class="header-mdl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hm-inner d-sm-flex align-items-center justify-content-between">
+                    <div class="header-logo">
+                        <a href="/Home"><img src="/Assets/client/image/logo.png" alt="logo"></a>
+                    </div>
+                    <form class="header-form" method="get" action="/Product/Search">
+                        <input class="search-box" placeholder="Tên sản phẩm và danh mục" required value="" type="search" name="txt">
+                        <button type="submit">Tìm kiếm</button>
+                    </form>
+                    
+                    @Html.Partial("_cart")
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@using ClothesShop.BU.DTO
+@{
+    var productsCart = (List<ChiTietDonHangDTO>)Session["GioHang"];
+    var priceTotal = 0;
+    var quantity = 0;
+    if (productsCart != null)
+    {
+        if (productsCart.Count() != 0)
+        {
+            quantity = productsCart.Count();
+            foreach (var product in productsCart)
+            {
+                priceTotal += (int)product.Gia * (int)product.SoLuong;
+            }
+        }
+    }
+}
+
+
+<div class="header-right">
+    <div class="header-cart">
+        <a href="/Cart">
+            <div class="cart-icon">
+                <img src="/Assets/client/image/cart-icon.png" alt="cart-icon">
+                <span>@quantity</span>
+            </div>
+            @priceTotal đ
+        </a>
+    </div>
+</div>

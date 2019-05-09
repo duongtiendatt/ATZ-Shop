@@ -1,0 +1,78 @@
+﻿
+@using ClothesShop.BU.Common
+
+@{ 
+    var hangDangSale = (int)EnumCommon.Product.HangDangSale;
+    var hangMoiVe = (int)EnumCommon.Product.HangMoiVe;
+    var phuKien = (int)EnumCommon.Product.PhuKien;
+    var thoiTrangNam = (int)EnumCommon.Product.ThoiTrangNam;
+    var thoiTrangNu = (int)EnumCommon.Product.ThoiTrangNu;
+    var thoiTrangTreEm = (int)EnumCommon.Product.ThoiTrangTreEm;
+}
+
+<footer>
+    <div class="footer-top text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-box box-1">
+                        <h6 class="fb-title text-center">Giới thiệu chung</h6>
+                        <div class="fb-iner">
+                            <p>ATZ- Shop chuyên cung cấp tất cả các mặt hàng thời trang cho đủ mọi lứa tuổi. Đảm bảo chất lượng và luôn đặt khách hàng lên hàng đầu, luôn mang lại niềm hạnh phúc cho quý khách hàng khi đến với chúng tôi!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 order-md-last">
+                    <div class="footer-box box-4">
+                        <h6 class="fb-title text-center">Thông tin liên hệ</h6>
+                        <div class="fb-iner">
+                            <ul>
+                                <li><p><i class="ion-ios-location-outline"></i> Phố Nhổn - Minh Khai - Bắc Từ Liêm - Hà Nội</p></li>
+                                <li><p><i class="ion-ios-telephone-outline"></i> +025 2155 3255</p></li>
+                                <li><p><i class="ion-ios-email-outline"></i> info@gmail.com</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-box">
+                        <h6 class="fb-title text-center">Danh mục</h6>
+                        <div class="fb-iner">
+                            <ul class="footer-links">
+                                <li><a href="/Product?product=@hangMoiVe">Hàng mới về</a></li>
+                                <li><a href="/Product?product=@hangDangSale">Hàng đang sale</a></li>
+                                <li><a href="/Product?product=@thoiTrangNam">Thời trang nam</a></li>
+                                <li><a href="/Product?product=@thoiTrangNu">Thời trang nữ</a></li>
+                                <li><a href="/Product?product=@thoiTrangTreEm">Thời trang trẻ em</a></li>
+                                <li><a href="/Product?product=@phuKien">Phụ kiện</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-btm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p>Copyright © 2019</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-social text-md-right">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

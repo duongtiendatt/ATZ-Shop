@@ -1,0 +1,12 @@
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\bin\Debug\ClothesShop.Model.dll.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\bin\Debug\ClothesShop.Model.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\bin\Debug\ClothesShop.Model.pdb
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\bin\Debug\EntityFramework.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\bin\Debug\EntityFramework.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\obj\Debug\ClothesShop.Model.csprojAssemblyReference.cache
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\obj\Debug\ClothesShop.Model.csproj.CoreCompileInputs.cache
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\obj\Debug\ClothesShop.Model.csproj.CopyComplete
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\obj\Debug\ClothesShop.Model.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Model\obj\Debug\ClothesShop.Model.pdb

@@ -1,0 +1,118 @@
+﻿@model ClothesShop.BU.DTO.SanPhamDTO
+@using ClothesShop.BU.DTO
+@{
+    ViewBag.Title = "Chi tiết sản phẩm";
+    var listProduct = (IEnumerable<SanPhamDTO>)ViewBag.ListProduct;
+}
+
+
+
+<!-- Start Breadcrumbs Section -->
+<section class="breadcrumbs-section background_bg" data-img-src="/Assets/client/image/aboutus-breadcrumbs-img.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page_title text-center">
+                    <h1>Chi tiết sản phẩm</h1>
+                    <ul class="breadcrumb justify-content-center">
+                        <li><span>Đến với những điều tốt đẹp nhất</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Header Section -->
+<!-- Start Product Detail Section -->
+<section class="products-detail-section pt_large">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="product-image">
+                    <img id="product_img" src='@Model.AnhSanPham' data-zoom-image="@Model.AnhSanPham" />
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="quickview-product-detail">
+                    <h2 class="box-title">@Model.TenSanPham</h2>
+                    <h3 class="box-price">
+                        @if (Model.GiaSale != null)
+                        {
+                            <del>@Model.GiaBan đ</del><span>@Model.GiaSale đ</span>
+                        }
+                        else
+                        {
+                            <span>@Model.GiaBan đ</span>
+                        }
+                    </h3>
+                    <p class="box-text">@Model.MoTa</p>
+                    <p class="box-text">Số lượng: <span id="so-luong">@ViewBag.SizeS</span></p>
+                    <p class="box-text">Loại sản phẩm: <span id="loai-sp">@Model.LoaiSanPham</span></p>
+                    <p class="box-text">Hãng sản xuất: <span id="hang-sx">@Model.HangSanXuat</span></p>
+                    <p class="box-text">Ngày nhập: <span id="nam-sx">@DateTime.Parse(@Model.NgayTao.ToString()).ToString("dd/MM/yyyy")</span></p>
+                    <div class="quantity-box size-box">
+                        <button class="size-active" value="1" id-product="@Model.MaSanPham">S</button>
+                        <button value="2" id-product="@Model.MaSanPham">M</button>
+                        <button value="3" id-product="@Model.MaSanPham">L</button>
+                        <button value="4" id-product="@Model.MaSanPham">XL</button>
+                        <button value="5" id-product="@Model.MaSanPham">XXL</button>
+                    </div>
+                    <div class="quantity-box">
+                        <p>Số lượng:</p>
+                        <div class="input-group">
+                            <input type="button" value="-" class="minus">
+                            <input class="quantity-number qty" type="text" value="1" min="1" max="10" id="so-luong-sp">
+                            <input type="button" value="+" class="plus">
+                        </div>
+                        <div class="quickview-cart-btn">
+                            <a class="btn btn-primary" id="them-gio-hang" style="color:azure"><img src="~/Assets/client/image/cart-icon-1.png" alt="cart-icon-1"> Thêm giỏ hàng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Product Detail Section -->
+<!-- Start Related Product Section -->
+<section class="related-product pb_large">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h4>Sản phẩm liên quan</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="products-slider4 same-nav owl-carousel owl-theme" data-margin="30" data-dots="false">
+                    @foreach (var item in listProduct)
+                    {
+                        <div class="item">
+                            <div class="product-box common-cart-box">
+                                <div class="product-img common-cart-img">
+                                    <img src="@item.AnhSanPham" alt="product-img">
+                                </div>
+                                <div class="product-info common-cart-info text-center">
+                                    <a href="/Product/Detail?productId=@item.MaSanPham" class="cart-name">@item.TenSanPham</a>
+                                    <p class="cart-price">
+                                        @if (item.GiaSale != null)
+                                        {
+                                            <del>@item.GiaBan đ</del><span>@item.GiaSale đ</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@item.GiaBan đ</span>
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Related Product Section -->

@@ -1,0 +1,238 @@
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.Web.dll.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.Web.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.Web.pdb
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\csc.exe
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\csc.exe.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\csc.rsp
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\csi.exe
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\csi.exe.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\csi.rsp
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.AppContext.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Console.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.Compression.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Claims.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.ValueTuple.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\vbc.exe
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\vbc.exe.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\vbc.rsp
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Antlr3.Runtime.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.BU.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\EntityFramework.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Newtonsoft.Json.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Owin.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\PagedList.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\PagedList.Mvc.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Helpers.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Mvc.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Optimization.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Razor.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\WebGrease.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.Model.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.BU.pdb
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.BU.dll.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\PagedList.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\PagedList.Mvc.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Helpers.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Mvc.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Optimization.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.Razor.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Newtonsoft.Json.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Antlr3.Runtime.pdb
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\EntityFramework.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.Model.pdb
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\bin\ClothesShop.Model.dll.config
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.csprojAssemblyReference.cache
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.csproj.CoreCompileInputs.cache
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.csproj.CopyComplete
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.dll
+C:\Users\ThanhNam\Desktop\thiennp\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.pdb
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.Web.dll.config
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.Web.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.Web.pdb
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\csc.exe
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\csc.exe.config
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\csc.rsp
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\csi.exe
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\csi.exe.config
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\csi.rsp
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.Managed.Core.targets
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.AppContext.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Collections.Immutable.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Console.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.Compression.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.FileSystem.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.IO.Pipes.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Reflection.Metadata.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.AccessControl.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Claims.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Security.Principal.Windows.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.ValueTuple.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.XmlDocument.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.XPath.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\vbc.exe
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\vbc.exe.config
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\vbc.rsp
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\VBCSCompiler.exe
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\roslyn\VBCSCompiler.exe.config
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Antlr3.Runtime.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.BU.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\EntityFramework.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\EntityFramework.SqlServer.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Core.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Cookies.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Facebook.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Google.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.OAuth.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Twitter.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Web.Infrastructure.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Newtonsoft.Json.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Owin.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\PagedList.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\PagedList.Mvc.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Diagnostics.DiagnosticSource.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Helpers.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Mvc.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Optimization.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Razor.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Deployment.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Razor.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\WebGrease.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.Model.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.BU.pdb
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.BU.dll.config
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\PagedList.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\PagedList.Mvc.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Helpers.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Mvc.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Optimization.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.Razor.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Deployment.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Web.WebPages.Razor.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Newtonsoft.Json.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Antlr3.Runtime.pdb
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\EntityFramework.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\EntityFramework.SqlServer.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Core.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Facebook.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Cookies.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Google.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.Twitter.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.Owin.Security.OAuth.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\System.Diagnostics.DiagnosticSource.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.Model.pdb
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\bin\ClothesShop.Model.dll.config
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.csprojAssemblyReference.cache
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.csproj.CoreCompileInputs.cache
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.csproj.CopyComplete
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.dll
+E:\BACK-END\ASP.NET\Documents\Thien DATN\ClothesShop\ClothesShop.Web\obj\Debug\ClothesShop.Web.pdb

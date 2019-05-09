@@ -1,0 +1,147 @@
+﻿@using ClothesShop.BU.Common
+@using PagedList.Mvc
+@model PagedList.IPagedList<ClothesShop.BU.DTO.SanPhamDTO>
+
+@{
+    ViewBag.Title = "Quản lí sản phẩm";
+    var soThuTu = ((int)ViewBag.pageNumber - 1) * ViewBag.pageSize;
+    var danhMuc = ViewBag.DanhMuc;
+}
+
+<div class="module">
+    <div class="module-head">
+        <h3 style="float:left">
+            Sản phẩm
+        </h3>
+        <a href="/admin/Manage/AddProduct" style="float:right">Thêm mới</a>
+        <br />
+    </div>
+    <div class="module-body table">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper" role="grid">
+            <div id="DataTables_Table_0_length" class="dataTables_length">
+                <form action="/admin/Manage/Product" method="post">
+                    <label>
+                        Danh mục:
+                        <select size="1" name="danhMuc" aria-controls="DataTables_Table_0" onchange="this.form.submit()">
+                            @if (ViewBag.DanhMuc == (int)EnumCommon.Product.TatCa)
+                            {
+                                <option value="0" selected="selected">Tất cả</option>
+                                <option value="1">Hàng mới về</option>
+                                <option value="2">Hàng đang sale</option>
+                                <option value="3">Thời trang nam</option>
+                                <option value="4">Thời trang nữ</option>
+                                <option value="5">Thời trang trẻ em</option>
+                                <option value="6">Phụ kiện thời trang</option>
+                            }
+                            else if (ViewBag.DanhMuc == (int)EnumCommon.Product.HangMoiVe)
+                            {
+                                <option value="0">Tất cả</option>
+                                <option value="1" selected="selected">Hàng mới về</option>
+                                <option value="2">Hàng đang sale</option>
+                                <option value="3">Thời trang nam</option>
+                                <option value="4">Thời trang nữ</option>
+                                <option value="5">Thời trang trẻ em</option>
+                                <option value="6">Phụ kiện thời trang</option>
+                            }
+                            else if (ViewBag.DanhMuc == (int)EnumCommon.Product.HangDangSale)
+                            {
+                                <option value="0">Tất cả</option>
+                                <option value="1">Hàng mới về</option>
+                                <option value="2" selected="selected">Hàng đang sale</option>
+                                <option value="3">Thời trang nam</option>
+                                <option value="4">Thời trang nữ</option>
+                                <option value="5">Thời trang trẻ em</option>
+                                <option value="6">Phụ kiện thời trang</option>
+                            }
+                            else if (ViewBag.DanhMuc == (int)EnumCommon.Product.ThoiTrangNam)
+                            {
+                                <option value="0">Tất cả</option>
+                                <option value="1">Hàng mới về</option>
+                                <option value="2">Hàng đang sale</option>
+                                <option value="3" selected="selected">Thời trang nam</option>
+                                <option value="4">Thời trang nữ</option>
+                                <option value="5">Thời trang trẻ em</option>
+                                <option value="6">Phụ kiện thời trang</option>
+                            }
+                            else if (ViewBag.DanhMuc == (int)EnumCommon.Product.ThoiTrangNu)
+                            {
+                                <option value="0">Tất cả</option>
+                                <option value="1">Hàng mới về</option>
+                                <option value="2">Hàng đang sale</option>
+                                <option value="3">Thời trang nam</option>
+                                <option value="4" selected="selected">Thời trang nữ</option>
+                                <option value="5">Thời trang trẻ em</option>
+                                <option value="6">Phụ kiện thời trang</option>
+                            }
+                            else if (ViewBag.DanhMuc == (int)EnumCommon.Product.ThoiTrangTreEm)
+                            {
+                                <option value="0">Tất cả</option>
+                                <option value="1">Hàng mới về</option>
+                                <option value="2">Hàng đang sale</option>
+                                <option value="3">Thời trang nam</option>
+                                <option value="4">Thời trang nữ</option>
+                                <option value="5" selected="selected">Thời trang trẻ em</option>
+                                <option value="6">Phụ kiện thời trang</option>
+                            }
+                            else if (ViewBag.DanhMuc == (int)EnumCommon.Product.PhuKien)
+                            {
+                                <option value="0">Tất cả</option>
+                                <option value="1">Hàng mới về</option>
+                                <option value="2">Hàng đang sale</option>
+                                <option value="3">Thời trang nam</option>
+                                <option value="4">Thời trang nữ</option>
+                                <option value="5">Thời trang trẻ em</option>
+                                <option value="6" selected="selected">Phụ kiện thời trang</option>
+                            }
+                        </select>
+                    </label>
+                </form>
+            </div>
+            <div class="dataTables_filter" id="DataTables_Table_0_filter">
+                <form action="/admin/Manage/Product" method="post">
+                    <input type="text" name="danhMuc" value="@ViewBag.danhMuc" style="display:none" />
+                    <input type="text" aria-controls="DataTables_Table_0" placeholder="Tên sản phẩm" name="txt" value="@ViewBag.Txt">
+                    <button>Tìm kiếm</button>
+                </form>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr style="font-weight:bold">
+                        <th>STT</th>
+                        <th>Hình Ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Mô tả</th>
+                        <th>Hãng</th>
+                        <th>Giá bán</th>
+                        <th>Giá sale</th>
+                        <th>Ngày tạo</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sp in Model)
+                    {
+                        soThuTu++;
+                        <tr>
+                            <td>@soThuTu</td>
+                            <td><img src="@sp.AnhSanPham" alt="Ảnh sản phẩm" /></td>
+                            <td>@sp.TenSanPham</td>
+                            <td>@sp.MoTa</td>
+                            <td>@sp.HangSanXuat</td>
+                            <td>@sp.GiaBan</td>
+                            <td>@sp.GiaSale</td>
+                            <td>@DateTime.Parse(sp.NgayTao.ToString()).ToString("dd/MM/yyyy")</td>
+                            <td>
+                                <a href="#">Sửa</a> |
+                                <a href="#">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <nav class="justify-content-center">
+                @Html.PagedListPager(Model, page => Url.Action("Product", new { page, txt = ViewBag.Txt, danhMuc = ViewBag.DanhMuc }))
+            </nav>
+        </div>
+    </div>
+</div>
