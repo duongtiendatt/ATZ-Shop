@@ -33,6 +33,17 @@ namespace ClothesShop.BU.Manage
             return listDTO;
         }
 
+        public List<ChiTietDonHangDTO> GetAllByMaDonHang(int maDH)
+        {
+            var listEF = db.ChiTietDonHangs.Where(x=>x.MaDon == maDH).ToList();
+            var listDTO = new List<ChiTietDonHangDTO>();
+            foreach (var ef in listEF)
+            {
+                listDTO.Add(_convert.ConvertToDTO(ef));
+            }
+            return listDTO;
+        }
+
         public ChiTietDonHangDTO GetById(int maChiTietDonHang)
         {
             var ef = db.ChiTietDonHangs.Find(maChiTietDonHang);

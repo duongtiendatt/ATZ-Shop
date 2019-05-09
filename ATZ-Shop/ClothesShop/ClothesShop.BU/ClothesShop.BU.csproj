@@ -62,6 +62,7 @@
     <Compile Include="Convert\SanPhamConvert.cs" />
     <Compile Include="Convert\SanPhamSizeConvert.cs" />
     <Compile Include="Convert\TaiKhoanConvert.cs" />
+    <Compile Include="Convert\ThongKeDateConvert.cs" />
     <Compile Include="DTO\ChiTietDonHangDTO.cs" />
     <Compile Include="DTO\DanhMucDTO.cs" />
     <Compile Include="DTO\DonHangDTO.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="DTO\SanPhamSizeDTO.cs" />
     <Compile Include="DTO\SizeDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
+    <Compile Include="DTO\ThongKeDateDTO.cs" />
     <Compile Include="Manage\ChiTietDonHangManage.cs" />
     <Compile Include="Manage\DanhMucManage.cs" />
     <Compile Include="Manage\DonHangManage.cs" />
