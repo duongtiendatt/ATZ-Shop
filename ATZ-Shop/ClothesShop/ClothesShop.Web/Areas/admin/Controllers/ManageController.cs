@@ -1,4 +1,5 @@
 ﻿using ClothesShop.BU.Common;
+using ClothesShop.BU.Convert;
 using ClothesShop.BU.DTO;
 using ClothesShop.BU.Manage;
 using PagedList;
@@ -18,6 +19,7 @@ namespace ClothesShop.Web.Areas.admin.Controllers
         readonly TaiKhoanManage _taiKhoanManage = new TaiKhoanManage();
         readonly DonHangManage _donHangManage = new DonHangManage();
         readonly ChiTietDonHangManage _chiTietDonHangManage = new ChiTietDonHangManage();
+        readonly ThongKeDateConvert _tkDateConvert = new ThongKeDateConvert();
 
         // GET: admin/Manage
         public ActionResult Account(int? page, string txt)
@@ -133,5 +135,15 @@ namespace ClothesShop.Web.Areas.admin.Controllers
             }
             return Json(new { message = message, status = status }, JsonRequestBehavior.AllowGet);
         }
+
+
+        // Thống kê
+        public ActionResult Statictis()
+        {
+            var listDH = _donHangManage.GetAll();
+            ViewBag.TKDate = _tkDateConvert.ConvertDTO(listDH);
+            return View();
+        }
+        
     }
 }
