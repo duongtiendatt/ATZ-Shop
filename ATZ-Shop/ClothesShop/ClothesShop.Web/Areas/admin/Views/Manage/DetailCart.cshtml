@@ -1,5 +1,5 @@
 ﻿@using ClothesShop.BU.Common
-@model ClothesShop.BU.DTO.DonHangDTO
+@model  List<ClothesShop.BU.DTO.ChiTietDonHangDTO>
 @{
     ViewBag.Title = "Chi tiết đơn hàng";
 }
@@ -7,7 +7,7 @@
 <div class="module">
     <div class="module-head">
         <h3>
-            Chi tiết đơn hàng @Model.MaDon
+            Chi tiết đơn hàng @Model[0].MaDon
         </h3>
     </div>
     <div class="module-body table">
@@ -15,38 +15,27 @@
             <table class="table table-striped">
                 <thead>
                     <tr style="font-weight:bold">
-                        <th>Mã tài khoản</th>
-                        <th>Họ tên</th>
-                        <th>Điện thoại</th>
-                        <th>Email</th>
-                        <th>Điạ chỉ</th>
-                        <th>Ghi chú</th>
-                        <th>Tổng tiền</th>
-                        <th>Ngày tạo</th>
-                        <th>Trạng thái</th>
+                        <th>Mã sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Size</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>@Model.MaTaiKhoan</td>
-                        <td>@Model.HoTenNN</td>
-                        <td>@Model.DienThoaiNN</td>
-                        <td>@Model.EmailNN</td>
-                        <td>@Model.DiaChiNN</td>
-                        <td>@Model.GhiChu</td>
-                        <td>@Model.TongTien</td>
-                        <td>@Model.NgayTao.Value.ToString("dd/MM/yyyy")</td>
-                        <td>
-                            @if (Model.TrangThai == (int)EnumCommon.StatusCart.DoiGiaoHang)
-                            {
-                                <span>Đợi giao hàng</span>
-                            }
-                            else if (Model.TrangThai == (int)EnumCommon.StatusCart.HoanThanh)
-                            {
-                                <span>Hoàn thành</span>
-                            }
-                        </td>
-                    </tr>
+                    @foreach (var ctsp in Model)
+                    {
+                        <tr>
+                            <td>@ctsp.MaSanPham</td>
+                            <td><img src="@ctsp.HinhAnh" alt="Alternate Text" /></td>
+                            <td>@ctsp.TenSanPham</td>
+                            <td>@ctsp.TenSize</td>
+                            <td>@ctsp.SoLuong</td>
+                            <td>@ctsp.Gia</td>
+                        </tr>
+                    }
+
                 </tbody>
             </table>
         </div>

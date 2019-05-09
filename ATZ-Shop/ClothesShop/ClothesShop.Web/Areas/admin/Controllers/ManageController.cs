@@ -17,6 +17,7 @@ namespace ClothesShop.Web.Areas.admin.Controllers
         readonly SanPhamManage _sanPhamManage = new SanPhamManage();
         readonly TaiKhoanManage _taiKhoanManage = new TaiKhoanManage();
         readonly DonHangManage _donHangManage = new DonHangManage();
+        readonly ChiTietDonHangManage _chiTietDonHangManage = new ChiTietDonHangManage();
 
         // GET: admin/Manage
         public ActionResult Account(int? page, string txt)
@@ -104,7 +105,7 @@ namespace ClothesShop.Web.Areas.admin.Controllers
         // GET: admin/DetailCart
         public ActionResult DetailCart(int? maHD)
         {
-            var model = _donHangManage.GetById((int)maHD);
+            var model = _chiTietDonHangManage.GetAllByMaDonHang((int)maHD);
 
             return View(model);
         }
