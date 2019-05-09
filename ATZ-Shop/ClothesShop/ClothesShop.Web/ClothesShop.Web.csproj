@@ -670,7 +670,6 @@
     <Content Include="Assets\admin\fonts\typicons.eot_" />
     <Content Include="Assets\admin\fonts\typicons.ttf" />
     <Content Include="Assets\admin\fonts\typicons.woff" />
-    <Content Include="Assets\admin\js\script.js.map" />
     <Content Include="Areas\admin\Views\Manage\Statictis.cshtml" />
     <Content Include="Areas\admin\Views\Manage\statictisMonth.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

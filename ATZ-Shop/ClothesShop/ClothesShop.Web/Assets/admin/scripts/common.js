@@ -387,38 +387,38 @@ $('.confirmcart').click(function () {
 //});
 
 //Login
-$("#loginbtn").click(function (event) {
-    var model = {
-        User: $('#EmailLogin').val(),
-        Password: $('#PassLogin').val(),
-        RememberMe: $('#RememberMe').is(":checked")
-    };
-    var checkTM = true;
-    if (model.Email == '' || model.Password == '') {
-        checkTM = false;
-        $.notify("Hãy nhập đủ thông tin", "error");
-    }
-    if (checkTM) {
-        event.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: '/Login/UserLogin',
-            data: AddAntiForgeryToken({ model: model }),
-            success: function (result) {
-                $.notify(result.message, result.status);
-                if (result.status == "success") {
-                    window.setTimeout(function () { location.href = "/admin/Manage/Account"; }, 500);
-                } else {
-                    //$('#Login').removeAttr("disabled");
-                }
-            },
-            error: function (ex) {
-                $.notify("Đăng nhập không thành công!", "error");
-                return false;
-            }
-        });
-    }
-});
+//$("#loginbtn").click(function (event) {
+//    var model = {
+//        User: $('#EmailLogin').val(),
+//        Password: $('#PassLogin').val(),
+//        RememberMe: $('#RememberMe').is(":checked")
+//    };
+//    var checkTM = true;
+//    if (model.Email == '' || model.Password == '') {
+//        checkTM = false;
+//        $.notify("Hãy nhập đủ thông tin", "error");
+//    }
+//    if (checkTM) {
+//        event.preventDefault();
+//        $.ajax({
+//            type: "POST",
+//            url: '/Login/UserLogin',
+//            data: AddAntiForgeryToken({ model: model }),
+//            success: function (result) {
+//                $.notify(result.message, result.status);
+//                if (result.status == "success") {
+//                    window.setTimeout(function () { location.href = "/admin/Manage/Account"; }, 500);
+//                } else {
+//                    //$('#Login').removeAttr("disabled");
+//                }
+//            },
+//            error: function (ex) {
+//                $.notify("Đăng nhập không thành công!", "error");
+//                return false;
+//            }
+//        });
+//    }
+//});
 //To accept ValidateAntiForgeryToken in controller
 //AddAntiForgeryToken = function (data) {
 //    data.__RequestVerificationToken = $('#__AjaxAntiForgeryForm input[name=__RequestVerificationToken]').val();

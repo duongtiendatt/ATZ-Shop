@@ -79,7 +79,7 @@ namespace ClothesShop.Web.Areas.admin.Controllers
             //var userFind = UserManager.FindByEmail(model.e);
             var userFind = await UserManager.FindByNameAsync(model.User);
             if (userFind == null)
-                return Json(new { message = "Tài khoản không tồn tại!", status = "error" }, JsonRequestBehavior.AllowGet);
+                return RedirectToAction("Index", "Login");
             var result = await SignInManager.PasswordSignInAsync(userFind.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
@@ -87,17 +87,21 @@ namespace ClothesShop.Web.Areas.admin.Controllers
                     {
                         var getTaiKhoan = _taiKhoanManage.GetTaiKhoanByIdentity(userFind.Id);
                         if(getTaiKhoan.IsAdmin == 1)
-                            return Json(new { message = "Đăng nhập thành công", status = "success" }, JsonRequestBehavior.AllowGet);
+                            return RedirectToAction("Account", "Manage");
                         else
-                            return Json(new { message = "Bạn không có quyền truy cập", status = "error" }, JsonRequestBehavior.AllowGet);
+                            //return Json(new { message = "Bạn không có quyền truy cập", status = "error" }, JsonRequestBehavior.AllowGet);
+                            return RedirectToAction("Index", "Login");
                     }
                 case SignInStatus.LockedOut:
-                    return Json(new { message = "Tài khoản của bạn đã bị khóa!", status = "error" }, JsonRequestBehavior.AllowGet);
+                    //return Json(new { message = "Tài khoản của bạn đã bị khóa!", status = "error" }, JsonRequestBehavior.AllowGet);
+                    return RedirectToAction("Index", "Login");
                 case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    //return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    return RedirectToAction("Index", "Login");
                 case SignInStatus.Failure:
                 default:
-                    return Json(new { message = "Sai tên tài khoản hoặc mật khẩu!", status = "error" }, JsonRequestBehavior.AllowGet);
+                    //return Json(new { message = "Sai tên tài khoản hoặc mật khẩu!", status = "error" }, JsonRequestBehavior.AllowGet);
+                    return RedirectToAction("Index", "Login");
             }
         }
 
@@ -111,6 +115,15 @@ namespace ClothesShop.Web.Areas.admin.Controllers
             {
                 return HttpContext.GetOwinContext().Authentication;
             }
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return Json(Url.Action("", "Admin/Login"), JsonRequestBehavior.AllowGet);
         }
         #endregion
     }
