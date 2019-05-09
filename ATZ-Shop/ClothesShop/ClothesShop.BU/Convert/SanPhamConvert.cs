@@ -26,10 +26,13 @@ namespace ClothesShop.BU.Convert
                 NgayTao = ef.NgayTao,
                 TenSanPham = ef.TenSanPham,
                 TrangThai = ef.TrangThai,
-                HangSanXuat = ef.HangSanXuat,
-                LoaiSanPham = ef.DanhMuc.TenDanhMuc,
-                TenDanhMuc = ef.DanhMuc.TenDanhMuc
+                HangSanXuat = ef.HangSanXuat
             };
+            if(ef.DanhMuc != null)
+            {
+                dto.LoaiSanPham = ef.DanhMuc.TenDanhMuc;
+                dto.TenDanhMuc = ef.DanhMuc.TenDanhMuc;
+            }
             if(ef.SanPhamSizes.Any(x=>x.MaSize == (int)EnumCommon.Size.S))
             {
                 dto.SoLuongSize = (int)ef.SanPhamSizes.FirstOrDefault(x => x.MaSize == (int)EnumCommon.Size.S).SoLuong;
@@ -38,6 +41,25 @@ namespace ClothesShop.BU.Convert
             {
                 dto.SoLuongSize = 0;
             }
+
+            //size s
+            dto.SizeS = ef.SanPhamSizes.Any(x => x.MaSize == (int)EnumCommon.Size.S) ? (int)ef.SanPhamSizes.FirstOrDefault(x => x.MaSize == (int)EnumCommon.Size.S).SoLuong : 0;
+
+            //size m
+            dto.SizeM = ef.SanPhamSizes.Any(x => x.MaSize == (int)EnumCommon.Size.M) ? (int)ef.SanPhamSizes.FirstOrDefault(x => x.MaSize == (int)EnumCommon.Size.M).SoLuong : 0;
+
+            //size l
+            dto.SizeL = ef.SanPhamSizes.Any(x => x.MaSize == (int)EnumCommon.Size.L) ? (int)ef.SanPhamSizes.FirstOrDefault(x => x.MaSize == (int)EnumCommon.Size.L).SoLuong : 0;
+
+            //size xl
+            dto.SizeXL = ef.SanPhamSizes.Any(x => x.MaSize == (int)EnumCommon.Size.XL) ? (int)ef.SanPhamSizes.FirstOrDefault(x => x.MaSize == (int)EnumCommon.Size.XL).SoLuong : 0;
+
+            //size xxl
+            dto.SizeXXL = ef.SanPhamSizes.Any(x => x.MaSize == (int)EnumCommon.Size.XXL) ? (int)ef.SanPhamSizes.FirstOrDefault(x => x.MaSize == (int)EnumCommon.Size.XXL).SoLuong : 0;
+
+            
+
+
             return dto;
         }
 

@@ -29,6 +29,20 @@ namespace ClothesShop.Model.DAO
                 return false;
             }
         }
+        //InsertProduct
+        public SanPham InsertProduct(SanPham sanPham)
+        {
+            try
+            {
+                var sp = db.SanPhams.Add(sanPham);
+                db.SaveChanges();
+                return sp;
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
         public bool Update(SanPham sanPham)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClothesShop.BU.DTO
 {
-    public class SanPhamSize
+    public class SanPhamSizeDTO
     {
         public int ID { get; set; }
         public Nullable<int> MaSanPham { get; set; }

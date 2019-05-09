@@ -74,7 +74,7 @@ namespace ClothesShop.BU.Manage
 
         public List<SanPhamDTO> GetAllSearch(int productType, string txt)
         {
-            var listEF = db.SanPhams.OrderByDescending(x => x.NgayTao).ToList();
+            var listEF = db.SanPhams.Where(sp => sp.TrangThai != (int)EnumCommon.Status.Xoa).OrderByDescending(x => x.NgayTao).ToList();
             if (productType != 0)
             {
                 listEF = listEF.Where(x => x.MaDanhMuc == productType).ToList();
@@ -150,6 +150,12 @@ namespace ClothesShop.BU.Manage
         {
             SanPham SanPham = _convert.ConvertToEF(SanPhamDTO);
             return _dao.Insert(SanPham);
+        }
+
+        public SanPhamDTO InsertProduct(SanPhamDTO SanPhamDTO)
+        {
+            SanPham SanPham = _convert.ConvertToEF(SanPhamDTO);
+            return _convert.ConvertToDTO(_dao.InsertProduct(SanPham));
         }
 
         public bool Update(SanPhamDTO SanPhamDTO)

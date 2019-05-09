@@ -132,8 +132,8 @@
                             <td>@sp.GiaSale</td>
                             <td>@DateTime.Parse(sp.NgayTao.ToString()).ToString("dd/MM/yyyy")</td>
                             <td>
-                                <a href="#">Sửa</a> |
-                                <a href="#">Xóa</a>
+                                <a href="@Url.Action("EditProduct", "Manage", new { maSP = sp.MaSanPham })">Sửa</a> |
+                                <a class="deleteproduct" id="pr@(sp.MaSanPham)">Xóa</a>
                             </td>
                         </tr>
                     }

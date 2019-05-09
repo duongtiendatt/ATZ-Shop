@@ -27,9 +27,11 @@ namespace ClothesShop.BU.Common
             PhuKien
         }
 
+
         public enum Status
         {
-            TonTai = 1
+            TonTai = 1,
+            Xoa = 0
         }
         
         public enum Size

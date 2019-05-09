@@ -244,8 +244,11 @@ $("#danhmuc").on("change", function () {
     }
 });
 
-$("#submitSP").click(function (event) {
+$(".updatesp").click(function (event) {
+    var getType = $(this).attr('id');
+    var type = getType.substring(3, getType.length);
     var sanPhamDTO = {
+        MaSanPham: $("#MaSanPham").val(),
         TenSanPham: $("#ten").val(),
         MoTa: $("#mota").val(),
         HangSanXuat: $("#hangsanxuat").val(),
@@ -259,7 +262,9 @@ $("#submitSP").click(function (event) {
         SizeXL: $("#sizexl").val(),
         SizeXXL: $("#sizexxl").val()
     };
-    console.log(sanPhamDTO);
+    if (type == 2) {
+        sanPhamDTO.AnhSanPham = $('.imagesp').attr('src');
+    }
     if (sanPhamDTO.TenSanPham != "" && sanPhamDTO.MoTa != "" && sanPhamDTO.HangSanXuat != "" && sanPhamDTO.NamSanXuat != "" && sanPhamDTO.GiaBan != "") {
         if (sanPhamDTO.MaDanhMuc === 2 && sanPhamDTO.GiaSale !== "" && sanPhamDTO.GiaBan <= sanPhamDTO.GiaSale) {
             $.notify("Giá sale phải nhỏ hơn giá bán!", "warning");
@@ -280,10 +285,14 @@ $("#submitSP").click(function (event) {
                 processData: false,
                 success: function (response) {
                     if (response) {
-                        $.notify("Gửi liên hệ thành công!", "success");
+                        if (parseInt(type) == 1)
+                            $.notify("Thêm sản phẩm thành công!", "success");
+                        else if (parseInt(type) == 2)
+                            $.notify("Sửa sản phẩm thành công!", "success");
+                        window.setTimeout(function () { window.location.reload(); }, 1000);
                     }
                     else {
-                        $.notify("Gửi liên hệ thất bại!", "error");
+                        $.notify("Thất bại!", "error");
                     }
                 }
             });
@@ -295,6 +304,7 @@ $("#submitSP").click(function (event) {
             }
             var file = $("#anh")[0].files[0];
             formData.append("anh", file);
+            formData.append("type", type);
             $.ajax({
                 type: 'post',
                 url: '/admin/Manage/UpdateProduct',
@@ -303,18 +313,37 @@ $("#submitSP").click(function (event) {
                 processData: false,
                 success: function (response) {
                     if (response) {
-                        $.notify("Gửi liên hệ thành công!", "success");
+                        if (parseInt(type) == 1)
+                            $.notify("Thêm sản phẩm thành công!", "success");
+                        else if (parseInt(type) == 2)
+                            $.notify("Sửa sản phẩm thành công!", "success");
+                        window.setTimeout(function () { window.location.reload(); }, 1000);
                     }
                     else {
-                        $.notify("Gửi liên hệ thất bại!", "error");
+                        $.notify("Thất bại!", "error");
                     }
                 }
             });
         }
     } else {
-        console.log("test in");
     }
 });
+
+$(".deleteproduct").click(function () {
+    var getProduct = $(this).attr('id');
+    var idProduct = getProduct.substring(2, getProduct.length);
+    $.ajax({
+        type: 'post',
+        url: '/admin/Manage/DeleteProduct',
+        data: { idProduct: parseInt(idProduct) },
+        success: function (response) {
+            $.notify(response.message, response.status);
+            if (response.status == "success")
+                window.setTimeout(function () { window.location.reload(); }, 1000);
+        }
+    });
+});
+
 
 //Confirm cart
 $('.confirmcart').click(function () {

@@ -2051,6 +2051,6 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     text-align: center;
 }
 
-.confirmcart:hover{
+.confirmcart:hover, .deleteproduct:hover {
     cursor: pointer;
 }

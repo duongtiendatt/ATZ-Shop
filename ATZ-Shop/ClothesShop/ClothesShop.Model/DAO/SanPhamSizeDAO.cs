@@ -47,6 +47,21 @@ namespace ClothesShop.Model.DAO
             }
         }
 
+        public bool UpdateSoLuong(SanPhamSize sanPhamSize)
+        {
+            try
+            {
+                var old = db.SanPhamSizes.FirstOrDefault(sp => sp.MaSanPham == sanPhamSize.MaSanPham && sp.MaSize == sanPhamSize.MaSize);
+                old.SoLuong = sanPhamSize.SoLuong;
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public bool Delete(int id)
         {
             try

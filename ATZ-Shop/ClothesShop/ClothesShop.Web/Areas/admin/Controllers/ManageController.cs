@@ -15,6 +15,7 @@ namespace ClothesShop.Web.Areas.admin.Controllers
     public class ManageController : Controller
     {
         readonly SanPhamManage _sanPhamManage = new SanPhamManage();
+        readonly SanPhamSizeManage _sanPhamSizeManage = new SanPhamSizeManage();
         readonly TaiKhoanManage _taiKhoanManage = new TaiKhoanManage();
         readonly DonHangManage _donHangManage = new DonHangManage();
 
@@ -58,26 +59,170 @@ namespace ClothesShop.Web.Areas.admin.Controllers
         }
 
         // POST: admin/UpdateProduct
-        public JsonResult UpdateProduct(SanPhamDTO sanPhamDTO, HttpPostedFileBase anh)
+        public JsonResult UpdateProduct(SanPhamDTO sanPhamDTO, HttpPostedFileBase anh, int type)
         {
-            string imgPath = Path.Combine(HttpContext.Server.MapPath("/Assets/client/image/"),
+            var result = false;
+            if (type == 1)
+            {
+                string imgPath = Path.Combine(HttpContext.Server.MapPath("/Assets/client/image/"),
                                               Path.GetFileName(anh.FileName));
-            anh.SaveAs(imgPath);
+                anh.SaveAs(imgPath);
 
-            var pathAnh = "/Assets/client/image/" + anh.FileName;
-            sanPhamDTO.AnhSanPham = pathAnh;
-            sanPhamDTO.NgayTao = DateTime.Now;
-            sanPhamDTO.TrangThai = (int)EnumCommon.Status.TonTai;
+                var pathAnh = "/Assets/client/image/" + anh.FileName;
+                sanPhamDTO.AnhSanPham = pathAnh;
+                sanPhamDTO.NgayTao = DateTime.Now;
+                sanPhamDTO.TrangThai = (int)EnumCommon.Status.TonTai;
 
-            var addProduct = _sanPhamManage.Insert(sanPhamDTO);
+                var addProduct = _sanPhamManage.InsertProduct(sanPhamDTO);
 
-            return Json(true, JsonRequestBehavior.AllowGet);
+                //add size s
+                var SpSizeS = new SanPhamSizeDTO()
+                {
+                    MaSanPham = addProduct.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.S,
+                    SoLuong = sanPhamDTO.SizeS
+                };
+                result = _sanPhamSizeManage.Insert(SpSizeS);
+
+
+                //add size M
+                var SpSizeM = new SanPhamSizeDTO()
+                {
+                    MaSanPham = addProduct.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.M,
+                    SoLuong = sanPhamDTO.SizeM  
+                };
+                result = _sanPhamSizeManage.Insert(SpSizeM);
+
+
+                //add size L
+                var SpSizeL = new SanPhamSizeDTO()
+                {
+                    MaSanPham = addProduct.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.L,
+                    SoLuong = sanPhamDTO.SizeL
+                };
+                result = _sanPhamSizeManage.Insert(SpSizeL);
+
+
+
+                //add size XL
+                var SpSizeXL = new SanPhamSizeDTO()
+                {
+                    MaSanPham = addProduct.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.XL,
+                    SoLuong = sanPhamDTO.SizeXL
+                };
+                result = _sanPhamSizeManage.Insert(SpSizeXL);
+
+                //add size m
+                var SpSizeXXL = new SanPhamSizeDTO()
+                {
+                    MaSanPham = addProduct.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.XXL,
+                    SoLuong = sanPhamDTO.SizeXXL
+                };
+                result = _sanPhamSizeManage.Insert(SpSizeXXL);
+            }
+            else
+            {
+                var getSP = _sanPhamManage.GetById(sanPhamDTO.MaSanPham);
+                if (anh == null)
+                    sanPhamDTO.AnhSanPham = getSP.AnhSanPham;
+                else
+                {
+                    string imgPath = Path.Combine(HttpContext.Server.MapPath("/Assets/client/image/"),
+                              Path.GetFileName(anh.FileName));
+                    anh.SaveAs(imgPath);
+
+                    var pathAnh = "/Assets/client/image/" + anh.FileName;
+                    sanPhamDTO.AnhSanPham = pathAnh;
+                    
+                }
+                sanPhamDTO.NgayTao = getSP.NgayTao;
+                sanPhamDTO.TrangThai = getSP.TrangThai;
+                sanPhamDTO.GioiTinh = getSP.GioiTinh;
+                result = _sanPhamManage.Update(sanPhamDTO);
+
+                //update size s
+                var SpSizeS = new SanPhamSizeDTO()
+                {
+                    MaSanPham = getSP.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.S,
+                    SoLuong = sanPhamDTO.SizeS
+                };
+                result = _sanPhamSizeManage.UpdateSoLuong(SpSizeS);
+
+                //update size M
+                var SpSizeM = new SanPhamSizeDTO()
+                {
+                    MaSanPham = getSP.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.M,
+                    SoLuong = sanPhamDTO.SizeM
+                };
+                result = _sanPhamSizeManage.UpdateSoLuong(SpSizeM);
+
+                //update size L
+                var SpSizeL = new SanPhamSizeDTO()
+                {
+                    MaSanPham = getSP.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.L,
+                    SoLuong = sanPhamDTO.SizeL
+                };
+                result = _sanPhamSizeManage.UpdateSoLuong(SpSizeL);
+
+                //update size XL
+                var SpSizeXL = new SanPhamSizeDTO()
+                {
+                    MaSanPham = getSP.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.XL,
+                    SoLuong = sanPhamDTO.SizeXL
+                };
+                result = _sanPhamSizeManage.UpdateSoLuong(SpSizeXL);
+
+                //update size m
+                var SpSizeXXL = new SanPhamSizeDTO()
+                {
+                    MaSanPham = getSP.MaSanPham,
+                    MaSize = (int)EnumCommon.Size.XXL,
+                    SoLuong = sanPhamDTO.SizeXXL
+                };
+                result = _sanPhamSizeManage.UpdateSoLuong(SpSizeXXL);
+
+                //if(sanPhamDTO.AnhSanPham)
+            }
+            
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
+        //Confirm cart
+        public JsonResult DeleteProduct(int idProduct)
+        {
+            var status = "error";
+            var message = "";
+            var getInfoProduct = _sanPhamManage.GetById(idProduct);
+            getInfoProduct.TrangThai = (int)EnumCommon.Status.Xoa;
+            var result = _sanPhamManage.Update(getInfoProduct);
+            switch (result)
+            {
+                case true:
+                    {
+                        status = "success";
+                        message = "Xóa thành công";
+                    }
+                    break;
+                default:
+                    message = "Đã xảy ra lỗi, thử lại sau";
+                    break;
+            }
+            return Json(new { message = message, status = status }, JsonRequestBehavior.AllowGet);
         }
 
         // GET: admin/EditProduct
         public ActionResult EditProduct(int maSP)
         {
-            return View();
+            var model = _sanPhamManage.GetById(maSP);
+            return View(model);
         }
 
         // GET: admin/Cart

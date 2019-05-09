@@ -1,7 +1,125 @@
-﻿
+﻿@model ClothesShop.BU.DTO.SanPhamDTO
 @{
     ViewBag.Title = "Sửa sản phẩm";
 }
 
-<h2>EditProduct</h2>
+@Html.Hidden("MaSanPham", Model.MaSanPham)
+<div class="module">
+    <div class="module-head">
+        <h3>
+            Sửa Sản phẩm
+        </h3>
+    </div>
+    <br />
+    <form class="form-horizontal row-fluid">
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Tên sản phẩm</label>
+            <div class="controls">
+                <input type="text" id="ten" placeholder="Tên sản phẩm" class="span8" value="@Model.TenSanPham" required>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Hình ảnh</label>
+            <div class="controls">
+                <img src="@Model.AnhSanPham" id="anhsp" class="imagesp"/>
+                <input type="file" id="anh" placeholder="Chọn hình ảnh" class="span8" value="@Model.AnhSanPham" required accept="image/*">
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Mô tả</label>
+            <div class="controls">
+                <textarea type="text" id="mota" placeholder="Mô tả sản phẩm..." data-original-title="" class="span8 tip" rows="4" required>@Model.MoTa</textarea>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Hãng sản xuất</label>
+            <div class="controls">
+                <input type="text" id="hangsanxuat" placeholder="Hãng sản xuất" class="span8" value="@Model.HangSanXuat" required>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Năm sản xuất</label>
+            <div class="controls">
+                <input type="number" id="namsanxuat" placeholder="Năm sản xuất" class="span8" value="@Model.NamSanXuat" required>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Giá bán</label>
+            <div class="controls">
+                <div class="input-append">
+                    <input type="number" placeholder="Giá bán" class="span8" id="giaban" required min="0" value="@Model.GiaBan"><span class="add-on">VNĐ</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Danh mục</label>
+            <div class="controls">
+                <div class="dropdown">
+                    @Html.DropDownListFor(model => model.MaDanhMuc, new List<SelectListItem>
+                                                    {
+                                                        new SelectListItem() {Text = "Hàng mới về", Value="1"},
+                                                        new SelectListItem() {Text = "Hàng đang sale", Value="2"},
+                                                        new SelectListItem() {Text = "Thời trang nam", Value="3"},
+                                                        new SelectListItem() {Text = "Thời trang nữ", Value="4"},
+                                                        new SelectListItem() {Text = "Thời trang trẻ em", Value="5"},
+                                                        new SelectListItem() {Text = "Phụ kiện thời trang", Value="6"},
+                                                    }, new { @class = "contact-month input-base", @id= "danhmuc" })
+                    @*<select id="danhmuc">
+                        <option value="1">Hàng mới về</option>
+                        <option value="2">Hàng đang sale</option>
+                        <option value="3">Thời trang nam</option>
+                        <option value="4">Thời trang nữ</option>
+                        <option value="5">Thời trang trẻ em</option>
+                        <option value="6">Phụ kiện thời trang</option>
+                    </select>*@
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Giá sale</label>
+            <div class="controls">
+                <div class="input-append giaSale">
+                    <input type="number" placeholder="Giá sale" class="span8" id="giasale" min="0" disabled required value="@Model.GiaSale"><span class="add-on">VNĐ</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="basicinput">Số lượng</label>
+            <div class="controls sl">
+                <table>
+                    <tr>
+                        <td>Size S</td>
+                        <td>Size M</td>
+                        <td>Size L</td>
+                        <td>Size XL</td>
+                        <td>Size XXL</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" min="0" id="sizes" value="@Model.SizeS" required /></td>
+                        <td><input type="number" min="0" id="sizem" value="@Model.SizeM" required /></td>
+                        <td><input type="number" min="0" id="sizel" value="@Model.SizeL" required /></td>
+                        <td><input type="number" min="0" id="sizexl" value="@Model.SizeXL" required /></td>
+                        <td><input type="number" min="0" id="sizexxl" value="@Model.SizeXXL" required /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <button type="button" id="sp-2" class="btn updatesp">Cập nhật</button>
+            </div>
+        </div>
+        <br />
+    </form>
+
+</div>
 
